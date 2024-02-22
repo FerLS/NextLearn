@@ -37,7 +37,7 @@ export default function Home() {
 
 
       </div>
-      <div className="justify-center p-10 grid grid-cols-5 gap-4 flex flex-wrap">
+      <div className="justify-center p-8 grid grid-cols-5 gap-4 overflow-hidden flex">
         <DemoCard />
         <DemoCard />
         <DemoCard />

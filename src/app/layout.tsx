@@ -35,6 +35,7 @@ export default function RootLayout({
                   alt="Vercel Logo"
                   className="dark:invert mx-auto"
                   width={80}
+                  height={24}
                 />
                 <HeadMenu />
               </div>
