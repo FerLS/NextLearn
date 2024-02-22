@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <main>
 
-      <div className=" flex flex-col items-center justify-center mt-10">
-        <p className="text-4xl font-bold loading-animation">Loading...</p>
+      <div className="flex flex-col items-center justify-center mt-10">
+        <p className="text-4xl font-bold text-center justify-center">Made with</p>
 
 
         <Image
           src="/next.svg"
           alt="Vercel Logo"
-          className="dark:invert mx-auto my-12"
-          width={100}
+          className="dark:invert mx-auto my-12 loading-animation"
+          width={200}
           height={24}
         />
       </div>
@@ -37,7 +37,7 @@ export default function Home() {
 
 
       </div>
-      <div className="justify-center p-8 grid grid-cols-5 gap-4 overflow-hidden flex">
+      <div className="justify-center p-8 grid grid-cols-5 gap-4 overflow-hidden flex ">
         <DemoCard />
         <DemoCard />
         <DemoCard />

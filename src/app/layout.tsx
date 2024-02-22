@@ -5,7 +5,11 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { HeadMenu } from "@/components/HeadMenu"
 import { ModeToggle } from "@/components/ModeToggle";
 import Image from "next/image";
+import { DM_Serif_Display } from "next/font/google";
+
+
 const inter = Inter({ subsets: ["latin"] });
+const dmSerifDisplay = DM_Serif_Display({ subsets: ["latin"], weight: ["400"], variable: "--serif" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,8 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-
-
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
