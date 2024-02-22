@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { DemoCard } from "@/components/DemoCard";
+import { Calculator } from "lucide-react";
 
 
 
@@ -37,8 +38,18 @@ export default function Home() {
 
 
       </div>
-      <div className="justify-center p-8 grid grid-cols-5 gap-4 overflow-hidden flex ">
-        <DemoCard />
+      <div className="p-8 grid grid-cols-5 gap-4 place-items-stretch mt-10 ">
+        <DemoCard
+          title={
+            <div className="flex items-center space-x-2">
+              <Calculator size={32} />
+              <span>Calculator</span>
+            </div>
+          }
+          description="A simple calculator that can add, subtract, multiply and divide."
+          footer="Try"
+          link="/calculator"
+        />
         <DemoCard />
         <DemoCard />
         <DemoCard />
