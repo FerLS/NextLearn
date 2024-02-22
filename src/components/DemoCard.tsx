@@ -18,7 +18,7 @@ export function DemoCard({ title = "Card Title", description = "Card Description
     return (
 
 
-        <div className="transition ease-in-out hover:scale-110 hover:invert  duration-300 hover:z-10 ">
+        <div className="transition ease-in-out hover:scale-110 hover:invert  duration-300 hover:z-10  overflow-hidden">
 
             <Card>
                 <CardHeader>

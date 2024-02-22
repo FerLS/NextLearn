@@ -11,7 +11,7 @@ export default function Home() {
     <main>
 
       <div className=" flex flex-col items-center justify-center mt-10">
-        <p className="text-4xl font-bold">Loading...</p>
+        <p className="text-4xl font-bold loading-animation">Loading...</p>
 
 
         <Image
@@ -37,8 +37,7 @@ export default function Home() {
 
 
       </div>
-      <div className=" justify-center  p-10  grid grid-cols-5 gap-4 flex">
-
+      <div className="justify-center p-10 grid grid-cols-5 gap-4 flex flex-wrap">
         <DemoCard />
         <DemoCard />
         <DemoCard />
