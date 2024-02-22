@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { HeadMenu } from "@/components/HeadMenu"
 import { ModeToggle } from "@/components/ModeToggle";
-
+import Image from "next/image";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function RootLayout({
           <header>
             <nav className="flex items-center justify-between p-8 w-full ">
               <div className="flex space-x-4">
-                <img
+                <Image
                   src="/vercel.svg"
                   alt="Vercel Logo"
                   className="dark:invert mx-auto"
