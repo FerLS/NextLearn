@@ -89,7 +89,7 @@ export default function Calculator() {
                 </div>
             </div>
             <div className='border-[8px] border-[--primary] rounded-2xl p-5 h-1/5 w-1/4'>
-                <span className='font-bold text-left font-bold text-3xl'>{result}</span>
+                <span className='font-bold text-left  font-bold text-3xl'>{result}</span>
             </div>
         </main>
     );
