@@ -3,12 +3,18 @@ import { Button } from "@/components/ui/button";
 import { DemoCard } from "@/components/DemoCard";
 import { Calculator } from "lucide-react";
 
-
-
+import Wave from 'react-wavify'
 
 export default function Home() {
+
+
+
+
   return (
+
+
     <main>
+
 
       <div className="flex flex-col items-center justify-center mt-10">
         <p className="text-4xl font-bold text-center justify-center">Made with</p>
@@ -23,13 +29,13 @@ export default function Home() {
         />
       </div>
 
-      <div className="flex justify-center space-x-4">
-        <Button >
+      <div className="flex justify-center gap-4  main-buttons">
+        <Button className="transition hover:-translate-y-1 hover:-translate-x-1 hover:scale-110">
           <a href="https://nextjs.org/docs" className="text-xl font-bold">
             Documentation &rarr;
           </a>
         </Button>
-        <Button >
+        <Button className="transition hover:-translate-y-1 hover:translate-x-1 hover:scale-110">
           <a href="https://nextjs.org/learn" className="text-xl font-bold">
             Next.js Learn &rarr;
           </a>
@@ -37,7 +43,8 @@ export default function Home() {
 
 
       </div>
-      <div className="p-8 grid-container  gap-4 place-items-stretch mt-10 ">
+
+      <div className="p-8 grid-container  gap-4 place-items-stretch  ">
         <DemoCard
           title={
             <div className="flex items-center space-x-2">
@@ -58,7 +65,16 @@ export default function Home() {
         <DemoCard />
         <DemoCard />
       </div>
-
+      <Wave fill="white"
+        paused={false}
+        style={{ display: 'flex ' }}
+        options={{
+          height: 60,
+          amplitude: 40,
+          speed: 0.15,
+          points: 5
+        }}
+      />
     </main >
   );
 }

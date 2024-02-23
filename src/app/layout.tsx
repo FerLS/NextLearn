@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
-import { HeadMenu } from "@/components/HeadMenu"
 import { ModeToggle } from "@/components/ModeToggle";
 import Image from "next/image";
 import { DM_Serif_Display } from "next/font/google";
@@ -39,7 +38,6 @@ export default function RootLayout({
                   width={80}
                   height={24}
                 />
-                <HeadMenu />
               </div>
               <div className="flex">
                 <ModeToggle />

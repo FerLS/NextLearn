@@ -68,24 +68,24 @@ export default function Calculator() {
                     readOnly
                 />
                 <div className="grid grid-cols-4 gap-3 h-4/5 p-10">
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(1)}>1</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(2)}>2</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(3)}>3</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('+')}>+</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(4)}>4</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(5)}>5</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(6)}>6</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('-')}>-</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(7)}>7</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(8)}>8</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(9)}>9</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('*')}>*</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleDotClick()}>.</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl col-start-2" onClick={() => handleNumberClick(0)}>0</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleEqualClick()}>=</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('/')}>/</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl col-span-2" onClick={() => handleClearClick()}>C</Button>
-                    <Button className="transition hover:invert border-2 duration-200 size-18 text-2xl col-span-2 col-start-3" onClick={() => handleDeleteClick()}><Delete /></Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(1)}>1</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(2)}>2</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(3)}>3</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('+')}>+</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(4)}>4</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(5)}>5</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(6)}>6</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('-')}>-</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(7)}>7</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(8)}>8</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleNumberClick(9)}>9</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('*')}>*</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleDotClick()}>.</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl col-start-2" onClick={() => handleNumberClick(0)}>0</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleEqualClick()}>=</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl" onClick={() => handleOperatorClick('/')}>/</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl col-span-2" onClick={() => handleClearClick()}>C</Button>
+                    <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl col-span-2 col-start-3" onClick={() => handleDeleteClick()}><Delete /></Button>
                 </div>
             </div>
             <div className='border-[8px] border-[--primary] rounded-2xl p-5 h-1/5 w-1/4'>

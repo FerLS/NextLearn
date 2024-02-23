@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 
+
 interface DemoCardProps {
     title?: React.ReactNode;
     description?: string;
@@ -17,10 +18,14 @@ interface DemoCardProps {
 }
 
 export function DemoCard({ title = <p>Title</p>, description = "Card Description", link = "null" }: DemoCardProps) {
+
+
+
+
     return (
 
 
-        <div className=" transition ease-in-out hover:scale-110 hover:invert duration-300 hover:z-10 overflow-hidden shadow-lg   ">
+        <div className={`transition-all ease-in-out hover:scale-110 dark:hover:light hover:dark duration-300 hover:z-10 overflow-hidden shadow-lg `}>
 
             <Card className="h-full ">
                 <CardHeader>

@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss"
 
-
 const config = {
   darkMode: ["class"],
   content: [
@@ -8,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-  ],
+	],
   prefix: "",
   theme: {
     container: {
@@ -73,10 +72,6 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        serif: ['var(--serif)'],
-      },
-
     },
   },
   plugins: [require("tailwindcss-animate")],
