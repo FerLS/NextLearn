@@ -47,7 +47,6 @@ export default function Home() {
             </div>
           }
           description="A simple calculator that can add, subtract, multiply and divide."
-          footer="Try"
           link="/calculator"
         />
         <DemoCard />
