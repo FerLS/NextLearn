@@ -27,7 +27,7 @@ export function DemoCard({ title = <p>Title</p>, description = "Card Description
                     <CardTitle>{title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <CardDescription>{description}</CardDescription>
+                    <CardDescription className="h-20">{description}</CardDescription>
                 </CardContent>
                 <CardFooter >
                     <Button
@@ -40,7 +40,7 @@ export function DemoCard({ title = <p>Title</p>, description = "Card Description
 
                 </CardFooter>
             </Card>
-        </div>
+        </div >
 
     )
 }

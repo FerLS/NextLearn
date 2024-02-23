@@ -90,6 +90,10 @@
   }
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .loading-animation {
   display: inline-block;
   position: relative;
@@ -116,5 +120,22 @@
 
   100% {
     transform: translateX(100%);
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

@@ -6,7 +6,6 @@ import { Calculator } from "lucide-react";
 
 
 
-
 export default function Home() {
   return (
     <main>
@@ -38,7 +37,7 @@ export default function Home() {
 
 
       </div>
-      <div className="p-8 grid grid-cols-5 gap-4 place-items-stretch mt-10 ">
+      <div className="p-8 grid-container  gap-4 place-items-stretch mt-10 ">
         <DemoCard
           title={
             <div className="flex items-center space-x-2">
