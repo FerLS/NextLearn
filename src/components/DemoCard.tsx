@@ -13,11 +13,10 @@ import { Button } from "@/components/ui/button";
 interface DemoCardProps {
     title?: React.ReactNode;
     description?: string;
-    footer?: string;
     link?: string;
 }
 
-export function DemoCard({ title = <p>Title</p>, description = "Card Description", footer = "Card Footer", link = "null" }: DemoCardProps) {
+export function DemoCard({ title = <p>Title</p>, description = "Card Description", link = "null" }: DemoCardProps) {
     return (
 
 
@@ -37,7 +36,7 @@ export function DemoCard({ title = <p>Title</p>, description = "Card Description
                             window.location.href = link
                         }}
 
-                    >{footer}</Button>
+                    >Try  &rarr;</Button>
 
                 </CardFooter>
             </Card>
