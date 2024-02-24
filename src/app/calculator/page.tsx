@@ -9,6 +9,7 @@ import { Delete } from 'lucide-react';
 export default function Calculator() {
     const [result, setResult] = useState<number>(0);
     const [input, setInput] = useState<string>('');
+    const [history, setHistory] = useState<string[]>([]); // Historial de cálculos
 
     const handleNumberClick = (number: number) => {
         setInput(prevInput => prevInput + number.toString());
@@ -20,7 +21,9 @@ export default function Calculator() {
 
     const handleEqualClick = () => {
         try {
-            setResult(eval(input));
+            const calculationResult = eval(input);
+            setResult(calculationResult);
+            setHistory(prevHistory => [...prevHistory, `${input} = ${calculationResult}`]); // Agregar el cálculo al historial con el resultado
         } catch (error) {
             setResult(0);
         }
@@ -59,7 +62,7 @@ export default function Calculator() {
     }, []);
 
     return (
-        <main className='p-10 ml-10 flex space-x-10'>
+        <main className='p-20 ml-10 flex space-x-10'>
             <div className='border-[8px] border-[--primary] rounded-2xl h-[500px] z-5'>
                 <Input
                     className='border-[0px] w-2/3 h-1/5 rounded-br-2xl rounded-t-[0px] rounded-l-[0px] text-secondary ring-[0px] bg-primary font-bold text-3xl'
@@ -88,8 +91,17 @@ export default function Calculator() {
                     <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl col-span-2 col-start-3" onClick={() => handleDeleteClick()}><Delete /></Button>
                 </div>
             </div>
-            <div className='border-[8px] border-[--primary] rounded-2xl p-5 h-1/5 w-1/4'>
-                <span className='font-bold text-left  font-bold text-3xl'>{result}</span>
+            <div className='h-1/5 w-1/4 space-y-5 flex flex-col '>
+                <div className='border-[8px] border-[--primary] rounded-2xl flex'>
+                    <span className='p-5 font-bold text-left font-bold text-3xl'>{result}</span>
+                </div>
+                <div className='border-[8px] border-[--primary] rounded-2xl flex    '>
+                    <ul className='p-5 font-bold text-left font-bold text-3xl'>
+                        {history.map((calculation, index) => (
+                            <li key={index}>{calculation}</li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </main>
     );

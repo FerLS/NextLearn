@@ -3,10 +3,7 @@ import { Button } from "@/components/ui/button";
 import { DemoCard } from "@/components/DemoCard";
 import { Calculator } from "lucide-react";
 
-import Wave from 'react-wavify'
-
 export default function Home() {
-
 
 
 
@@ -23,7 +20,7 @@ export default function Home() {
         <Image
           src="/next.svg"
           alt="Vercel Logo"
-          className="dark:invert mx-auto my-12 loading-animation"
+          className="dark:invert  mx-auto my-12 loading-animation"
           width={200}
           height={24}
         />
@@ -65,16 +62,9 @@ export default function Home() {
         <DemoCard />
         <DemoCard />
       </div>
-      <Wave fill="white"
-        paused={false}
-        style={{ display: 'flex ' }}
-        options={{
-          height: 60,
-          amplitude: 40,
-          speed: 0.15,
-          points: 5
-        }}
-      />
+
+
+
     </main >
   );
 }
