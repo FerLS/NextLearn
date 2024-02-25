@@ -62,10 +62,10 @@ export default function Calculator() {
     }, []);
 
     return (
-        <main className='p-20 ml-10 flex space-x-10'>
-            <div className='border-[8px] border-[--primary] rounded-2xl h-[500px] z-5'>
+        <main className='p-20 ml-10 flex space-x-10 justify-center'>
+            <div className='border-[2px] border-primary rounded-2xl h-[500px] z-5'>
                 <Input
-                    className='border-[0px] w-2/3 h-1/5 rounded-br-2xl rounded-t-[0px] rounded-l-[0px] text-secondary ring-[0px] bg-primary font-bold text-3xl'
+                    className='border-[0px] w-2/3 h-1/5 rounded-tl-[10px] rounded-br-2xl rounded-tr-[0px] rounded-bl-[0px] text-secondary ring-[0px] bg-primary font-bold text-3xl'
                     type="text"
                     value={input}
                     readOnly
@@ -91,12 +91,12 @@ export default function Calculator() {
                     <Button className="transition dark:hover:light hover:dark border-2 duration-200 size-18 text-2xl col-span-2 col-start-3" onClick={() => handleDeleteClick()}><Delete /></Button>
                 </div>
             </div>
-            <div className='h-1/5 w-1/4 space-y-5 flex flex-col '>
-                <div className='border-[8px] border-[--primary] rounded-2xl flex'>
+            <div className='h-1/5 w-1/4 space-y-5 flex flex-col h-auto'>
+                <div className='border-[2px] border-[--primary] rounded-2xl flex h-[100px]'>
                     <span className='p-5 font-bold text-left font-bold text-3xl'>{result}</span>
                 </div>
-                <div className='border-[8px] border-[--primary] rounded-2xl flex    '>
-                    <ul className='p-5 font-bold text-left font-bold text-3xl'>
+                <div className='border-[2px] border-[--primary] rounded-2xl overflow-hidden grow max-h-[382px]'>
+                    <ul className='p-5 font-bold text-left font-bold text-3xl '>
                         {history.map((calculation, index) => (
                             <li key={index}>{calculation}</li>
                         ))}

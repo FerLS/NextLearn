@@ -27,89 +27,98 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
         >
-          <header>
-            <Wave fill="	#fafafa"
-              paused={false}
-              style={{ display: 'flex', rotate: "180deg" }}
-              className={`dark:visible invisible h-0 dark:h-full`}
-              options={{
-                height: 70,
-                amplitude: 40,
-                speed: 0.15,
-                points: 5
-              }}
-            />
-            <Wave fill="#000000"
-              paused={false}
-              style={{ display: 'flex', rotate: "180deg" }}
-              className={`dark:h-0 `}
-              options={{
-                height: 70,
-                amplitude: 40,
-                speed: 0.15,
-                points: 5
-              }}
-            />
-            <nav className="flex items-center justify-between p-8 w-full -mt-40">
-              <div className="flex space-x-4">
-                <Image
-                  src="/vercel.svg"
-                  alt="Vercel Logo"
+          <div className="flex-col flex min-h-screen justify-between">
 
-                  className="invert  mx-auto  mix-blend-difference	"
+            <header>
+              <Wave fill="	#fafafa"
+                paused={false}
+                style={{ display: 'flex', rotate: "180deg" }}
+                className={`dark:visible invisible h-0 dark:h-full`}
+                options={{
+                  height: 70,
+                  amplitude: 40,
+                  speed: 0.15,
+                  points: 5
+                }}
+              />
+              <Wave fill="#000000"
+                paused={false}
+                style={{ display: 'flex', rotate: "180deg" }}
+                className={`dark:h-0 `}
+                options={{
+                  height: 70,
+                  amplitude: 40,
+                  speed: 0.15,
+                  points: 5
+                }}
+              />
+              <nav className="flex items-center justify-between p-8 w-full -mt-40">
+                <div className="flex space-x-4">
+                  <Image
+                    src="/vercel.svg"
+                    alt="Vercel Logo"
 
-                  width={90}
-                  height={24}
-                />
+                    className="invert  mx-auto  mix-blend-difference	"
 
+                    width={90}
+                    height={24}
+                  />
+
+                </div>
+                <div className="flex">
+                  <ModeToggle />
+                </div>
+
+              </nav>
+
+
+            </header>
+            {children}
+
+            <footer >
+
+              <div className="transition hover:-translate-y-1 duration-200 space-x-4 flex justify-end p-10 -mb-[150px]  mix-blend-difference dark:invert-0 invert ">
+                <a className="font-semibold" href="https://github.com/FerLS">@FerLS</a>
+                <GithubIcon />
               </div>
-              <div className="flex">
-                <ModeToggle />
-              </div>
 
-            </nav>
+              <Wave fill="	#fafafa"
+                paused={false}
+                style={{ display: 'flex' }}
+                className={`dark:visible invisible h-0 dark:h-full`}
+                options={{
+                  height: 70,
+                  amplitude: 40,
+                  speed: 0.15,
+                  points: 5
+                }}
+              />
+              <Wave fill="#000000"
+                paused={false}
+                style={{ display: 'flex' }}
+                className={`dark:h-0 `}
+                options={{
+                  height: 70,
+                  amplitude: 40,
+                  speed: 0.15,
+                  points: 5
+                }}
+              />
 
-
-          </header>
-          {children}
-        </ThemeProvider>
-        <footer>
-
-          <div className="transition hover:-translate-y-1 duration-200 space-x-4 flex justify-end p-10 -mb-[150px]  mix-blend-difference dark:invert-0 invert ">
-            <a className="font-semibold" href="github.com/FerLS">@FerLS</a>
-            <GithubIcon />
+            </footer>
           </div>
-          <Wave fill="	#fafafa"
-            paused={false}
-            style={{ display: 'flex' }}
-            className={`dark:visible invisible h-0 dark:h-full`}
-            options={{
-              height: 70,
-              amplitude: 40,
-              speed: 0.15,
-              points: 5
-            }}
-          />
-          <Wave fill="#000000"
-            paused={false}
-            style={{ display: 'flex' }}
-            className={`dark:h-0 `}
-            options={{
-              height: 70,
-              amplitude: 40,
-              speed: 0.15,
-              points: 5
-            }}
-          />
 
-        </footer>
+        </ThemeProvider>
+
+
       </body>
-    </html>
+    </html >
   );
 }

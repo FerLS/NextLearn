@@ -15,37 +15,29 @@ interface DemoCardProps {
     title?: React.ReactNode;
     description?: string;
     link?: string;
+    className?: string;
 }
 
-export function DemoCard({ title = <p>Title</p>, description = "Card Description", link = "null" }: DemoCardProps) {
-
-
-
+export function DemoCard({ title = <p>Title</p>, description = "Card Description", link = "null", className }: DemoCardProps) {
 
     return (
+        <div className={`transition-all ease-in-out hover:scale-110 dark:hover:light hover:dark duration-300 hover:z-10 overflow-hidden shadow-lg ${className}`}>
 
-
-        <div className={`transition-all ease-in-out hover:scale-110 dark:hover:light hover:dark duration-300 hover:z-10 overflow-hidden shadow-lg `}>
-
-            <Card className="h-full ">
+            <Card className="flex-cols h-full justify-between flex flex-col border-2 hover:border-0">
                 <CardHeader>
                     <CardTitle>{title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <CardDescription className="h-20">{description}</CardDescription>
+                    <CardDescription>{description}</CardDescription>
                 </CardContent>
-                <CardFooter >
+                <CardFooter className="flex">
                     <Button
                         onClick={() => {
-
                             window.location.href = link
                         }}
-
                     >Try  &rarr;</Button>
-
                 </CardFooter>
             </Card>
         </div >
-
     )
 }
