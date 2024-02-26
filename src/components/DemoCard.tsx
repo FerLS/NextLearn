@@ -27,7 +27,7 @@ export function DemoCard({ title = <p>Title</p>, description = "Card Description
 
         <div className={`transition-all ease-in-out hover:scale-110 dark:hover:light hover:dark duration-300 hover:z-10 overflow-hidden shadow-lg `}>
 
-            <Card className="h-full border-2">
+            <Card className="flex-col flex h-full justify-between border-2">
                 <CardHeader>
                     <CardTitle>{title}</CardTitle>
                 </CardHeader>
