@@ -20,6 +20,7 @@
     "date-fns": "^3.3.1",
     "embla-carousel-react": "^8.0.0-rc23",
     "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
     "lucide-react": "^0.335.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",

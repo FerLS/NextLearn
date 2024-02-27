@@ -25,7 +25,6 @@ export default function Home() {
           height={24}
         />
       </div>
-
       <div className="flex justify-center gap-4  main-buttons">
         <Button className="transition hover:-translate-y-1 hover:-translate-x-1 hover:scale-110">
           <a href="https://nextjs.org/docs" className="text-xl font-bold">
