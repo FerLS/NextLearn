@@ -113,33 +113,28 @@
   }
 }
 
-@keyframes fadeout {
-  0% {
-    opacity: 1;
 
-  }
-
-  50% {
-    opacity: 0;
-
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-20%);
-
-  }
-}
 
 .fadein {
   animation: fadein 1s;
 }
 
 .fadeout {
-  animation: fadeout 1s;
+  animation: fadeout 0.2s;
+  animation-fill-mode: forwards;
+
 }
 
 
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 
 
 @keyframes wave {

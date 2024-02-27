@@ -9,7 +9,6 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 interface DemoCardProps {
     title?: React.ReactNode;
@@ -20,10 +19,8 @@ interface DemoCardProps {
 export function DemoCard({ title = <p>Title</p>, description = "Card Description", link = "null" }: DemoCardProps) {
 
     const handleClick = () => {
-        document.body.classList.replace('fadein', 'fadeout'); // Reemplaza la clase CSS 'fade-in' por 'fade-out' en el elemento body
-        setTimeout(() => {
-            window.location.href = link;
-        }, 500); // Ajusta el tiempo de espera para que coincida con la duración de la animación de fade-out en CSS
+        window.location.href = link;
+
     };
 
     return (
