@@ -1,7 +1,19 @@
+"use client";
 
+import React, { useState, useEffect } from 'react';
 
 export default function Calendar() {
-    const currentDate = new Date();
+    const [currentDate, setCurrentDate] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentDate(new Date());
+        }, 1000); // Actualiza la fecha cada segundo
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return (
         <div className='h-l space-y-5'>
